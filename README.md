@@ -26,10 +26,6 @@ mvn clean install
 ```
 After that go in the `target` folder and execute for launching the application:
 ```
-java -jar db-benchmarks-1.0-SNAPSHOT.jar
-```
-Alternatively copy `db-benchmarks-1.0-SNAPSHOT-jar-with-dependencies.jar` file and launch it wherever you want executing:
-```
 java -jar db-benchmarks-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
