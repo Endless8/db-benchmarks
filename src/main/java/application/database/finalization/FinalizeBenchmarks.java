@@ -17,4 +17,5 @@ public class FinalizeBenchmarks {
             throw new RuntimeException(e);
         }
     }
+
 }

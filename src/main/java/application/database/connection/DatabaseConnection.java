@@ -25,4 +25,12 @@ public class DatabaseConnection {
         return connection;
     }
 
+    public static void closeDatabaseConnection(Connection connection) {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

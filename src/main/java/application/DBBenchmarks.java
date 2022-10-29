@@ -24,6 +24,7 @@ public class DBBenchmarks {
         List<Long> selectionTimes = PerformBenchmarks.collectSelectionTimes(properties, connection);
         PrintResults.printTimes(selectionTimes, selectType);
         FinalizeBenchmarks.dropBenchmarkTable(connection);
+        DatabaseConnection.closeDatabaseConnection(connection);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Press ENTER to exit.");
         scanner.nextLine();
