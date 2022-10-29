@@ -8,7 +8,7 @@ This simple Java application performs a set of INSERT queries and SELECT queries
 The configuration file, under `/resources/configuration.properties`, contains the following properties
 | Property name | Description |
 | ------------- | ----------- |
-| database.url | Contains the URL of Database host. |
+| database.url | URL of Database host. |
 | database.user | Username for the Database. |
 | database.password | Password for the Database. |
 | commit.frequency | Number of transactions between a commit and another. |

@@ -12,14 +12,10 @@ import java.util.*;
 
 public class DBBenchmarks {
 
-    private final String insertType = "INSERT";
-    private final String selectType = "SELECT";
+    private static final String insertType = "INSERT";
+    private static final String selectType = "SELECT";
 
-    public DBBenchmarks() {
-        startDatabaseBenchmarkApp();
-    }
-
-    public void startDatabaseBenchmarkApp() {
+    public static void startDatabaseBenchmarkApp() {
         Properties properties = PropertiesLoader.getConfigurationProperties();
         Connection connection = DatabaseConnection.getDatabaseConnection(properties);
         InitializeBenchmarks.createBenchmarkTable(connection);
