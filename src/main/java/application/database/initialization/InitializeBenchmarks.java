@@ -16,7 +16,7 @@ public class InitializeBenchmarks {
 
     public static void createBenchmarkTable(Connection connection) {
         ScriptRunner runner = new ScriptRunner(connection, false, false);
-        ClassLoader loader = App.class.getClassLoader();
+        ClassLoader loader = InitializeBenchmarks.class.getClassLoader();
         try {
             runner.runScript(new BufferedReader(new InputStreamReader(Objects.requireNonNull(loader.getResourceAsStream(CREATE_BENCHMARK_TABLE_SCRIPT_FILENAME)))));
         } catch (IOException | SQLException e) {

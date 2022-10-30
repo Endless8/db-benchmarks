@@ -12,7 +12,7 @@ public class PropertiesLoader {
 
     public static Properties getConfigurationProperties() {
         Properties properties = new Properties();
-        ClassLoader loader = App.class.getClassLoader();
+        ClassLoader loader = PropertiesLoader.class.getClassLoader();
         try (InputStream stream = loader.getResourceAsStream(configurationPropertiesFilename)) {
             properties.load(stream);
         } catch (IOException e) {
