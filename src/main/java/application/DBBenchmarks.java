@@ -12,17 +12,17 @@ import java.util.*;
 
 public class DBBenchmarks {
 
-    private static final String insertType = "INSERT";
-    private static final String selectType = "SELECT";
+    private static final String INSERT_TYPE = "INSERT";
+    private static final String SELECT_TYPE = "SELECT";
 
     public static void startDatabaseBenchmarkApp() {
         Properties properties = PropertiesLoader.getConfigurationProperties();
         Connection connection = DatabaseConnection.getDatabaseConnection(properties);
         InitializeBenchmarks.createBenchmarkTable(connection);
         List<Long> insertionTimes = PerformBenchmarks.collectInsertionTimes(connection, properties);
-        PrintResults.printTimes(insertionTimes, insertType);
+        PrintResults.printTimes(insertionTimes, INSERT_TYPE);
         List<Long> selectionTimes = PerformBenchmarks.collectSelectionTimes(properties, connection);
-        PrintResults.printTimes(selectionTimes, selectType);
+        PrintResults.printTimes(selectionTimes, SELECT_TYPE);
         FinalizeBenchmarks.dropBenchmarkTable(connection);
         DatabaseConnection.closeDatabaseConnection(connection);
         Scanner scanner = new Scanner(System.in);

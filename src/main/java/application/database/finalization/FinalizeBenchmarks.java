@@ -5,12 +5,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class FinalizeBenchmarks {
-    private static final String dropTableQuery = "DROP TABLE Persons";
+    private static final String DROP_TABLE_QUERY = "DROP TABLE Persons";
 
     public static void dropBenchmarkTable(Connection connection) {
         try {
             Statement statement = connection.createStatement();
-            statement.executeUpdate(dropTableQuery);
+            statement.executeUpdate(DROP_TABLE_QUERY);
             connection.commit();
             System.out.println("Database benchmark table successfully dropped.");
         } catch (SQLException e) {
