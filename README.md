@@ -5,7 +5,7 @@ Simple Java application to perform benchmarks to target Postgre Database.
 This simple Java application performs a set of INSERT queries and SELECT queries and measures the time that passes between and operation and another, then prints to console the minimum, the maximum and the average time of all the queries, grouped by query type. The target table for benchmarks is automatically created by a script then it's automatically dropped at the end of benchmarks.
 
 ## Configuration file
-The configuration file, under `/resources/configuration.properties`, contains the following properties
+The configuration file, under `/resources/configuration.properties`, contains the following properties:
 | Property name | Description |
 | ------------- | ----------- |
 | database.url | URL of Database host. |
@@ -24,7 +24,7 @@ Clone this repository and execute this command in the root folder:
 ```
 mvn clean install
 ```
-After that go in the `target` folder and execute for launching the application:
+Then go into `target` folder and execute this command to launch the application:
 ```
 java -jar db-benchmarks-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
