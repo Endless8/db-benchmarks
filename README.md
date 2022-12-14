@@ -1,5 +1,5 @@
 # DB Benchmarks
-Simple Java application to perform benchmarks to target Postgre Database.
+Simple Java application to perform benchmarks to target Postgre Database. "
 
 ## Description
 This simple Java application performs a set of INSERT queries and SELECT queries and measures the time that passes between and operation and another, then prints to console the minimum, the maximum and the average time of all the queries, grouped by query type. The target table for benchmarks is automatically created by a script then it's automatically dropped at the end of benchmarks.
